@@ -12,9 +12,8 @@ public class Menu {
         opt = sc.nextInt();
         switch (opt) {
             case 1:
-                ObjProducto p1 = new ObjProducto();
-                m.LlenarMatriz(d);
-                m.MostrarMatriz(M);
+                Punto1 p1 = new Punto1();
+                p1.P1(d);
                 break;
 
             default:

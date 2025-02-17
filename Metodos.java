@@ -1,8 +1,9 @@
 import java.util.Scanner;
+
 public class Metodos {
     Scanner sc = new Scanner(System.in);
 
-    public ObjProducto[][] LlenarMatriz (int d) {
+    public ObjProducto[][] LlenarMatriz(int d) {
         ObjProducto[][] m = new ObjProducto[d][d];
         for (int i = 0; i < m.length; i++) {
             for (int j = 0; j < m.length; j++) {
@@ -18,7 +19,7 @@ public class Metodos {
         }
         return m;
     }
-    
+
     public void MostrarMatriz(ObjProducto[][] m) {
         for (int i = 0; i < m.length; i++) {
             for (int j = 0; j < m.length; j++) {
@@ -29,5 +30,19 @@ public class Metodos {
                 System.out.println("\n");
             }
         }
+    }
+
+    public String BuscadorProducto(ObjProducto[][] m) {
+        String mensaje = "", MensajeResult = "";
+        System.out.println("Ingrese el nombre del producto: ");
+        mensaje = sc.next();
+        for (int i = 0; i < m.length; i++) {
+            for (int j = 0; j < m.length; j++) {
+                if (m[i][j].getNombre().toLowerCase().equals(mensaje)) {
+                    MensajeResult = "El producto se encuentra en la fila " + i + "en la columna " + j;
+                }
+            }
+        }
+        return MensajeResult;
     }
 }

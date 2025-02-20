@@ -10,12 +10,16 @@ public class Menu {
 
         System.out.println("Ingrese la opción deseada del 1 al 10: ");
         opt = sc.nextInt();
+        System.out.println("Ingrese la dimensión de la matriz: ");
+        d = sc.nextInt();
         switch (opt) {
             case 1:
                 Punto1 p1 = new Punto1();
                 p1.P1(d);
                 break;
-
+            case 2:
+                Punto2 p2 = new Punto2();    
+                p2.P2(d);
             default:
                 System.out.println("Opción no válida");
                 break;

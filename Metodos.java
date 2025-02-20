@@ -7,14 +7,14 @@ public class Metodos {
         ObjProducto[][] m = new ObjProducto[d][d];
         for (int i = 0; i < m.length; i++) {
             for (int j = 0; j < m.length; j++) {
-                ObjProducto obj = new ObjProducto();
-                System.out.println("Ingrese el nombre del producto: ");
-                obj.setNombre(sc.next());
-                System.out.println("Ingrese el precio del producto: ");
-                obj.setPrecio(sc.nextDouble());
-                System.out.println("Ingrese la cantidad del producto: ");
-                obj.setCantidad(sc.nextInt());
-                m[i][j] = obj;
+                ObjProducto o = new ObjProducto();
+                System.out.println("Ingrese el nombre producto");
+                o.setNombre(sc.next());
+                System.out.println("Ingrese el precio del producto");
+                o.setPrecio(sc.nextDouble());
+                System.out.println("Ingrese la cantidad");
+                o.setCantidad(sc.nextInt());
+                m[i][j] = o;
             }
         }
         return m;
@@ -39,10 +39,22 @@ public class Metodos {
         for (int i = 0; i < m.length; i++) {
             for (int j = 0; j < m.length; j++) {
                 if (m[i][j].getNombre().toLowerCase().equals(mensaje)) {
-                    MensajeResult = "El producto se encuentra en la fila " + i + "en la columna " + j;
+                    MensajeResult = "El producto se encuentra en la fila " + (i + 1) + " en la columna " + (j + 1);
                 }
             }
         }
         return MensajeResult;
+    }
+
+    public int CalcularInventario (ObjProducto[][] m) {
+        int total = 0;
+        for (int i = 0; i < m.length; i++) {
+            for (int j = 0; j < m.length; j++) {
+                if (m[i][j] != null) {
+                    total += m[i][j].getCantidad();
+                }
+            }
+        }
+        return total;
     }
 }

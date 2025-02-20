@@ -20,6 +20,8 @@ public class Metodos {
         return m;
     }
 
+   
+
     public void MostrarMatriz(ObjProducto[][] m) {
         for (int i = 0; i < m.length; i++) {
             for (int j = 0; j < m.length; j++) {
@@ -31,6 +33,8 @@ public class Metodos {
             }
         }
     }
+
+   
 
     public String BuscadorProducto(ObjProducto[][] m) {
         String mensaje = "", MensajeResult = "";
@@ -46,7 +50,9 @@ public class Metodos {
         return MensajeResult;
     }
 
-    public int CalcularInventario (ObjProducto[][] m) {
+    
+
+    public int CalcularInventario(ObjProducto[][] m) {
         int total = 0;
         for (int i = 0; i < m.length; i++) {
             for (int j = 0; j < m.length; j++) {

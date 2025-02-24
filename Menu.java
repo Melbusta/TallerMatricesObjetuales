@@ -31,6 +31,10 @@ public class Menu {
                     Punto3 p3 = new Punto3();
                     p3.punto3(d);
                     break;
+                case 5:
+                    Punto5 p5 = new Punto5();
+                    p5.P5(d);
+                    break;
                 case 15:
                     System.out.println("hasta pronto");
                     bandera = false;

@@ -5,5 +5,7 @@ public class Punto2 {
         m = M.LlenarMatriz(d);
         M.MostrarMatriz(m);
         M.CalcularInventario(m);
+        
+        System.out.println("");
     }
 }
